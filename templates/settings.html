@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Settings{% endblock %}
+{% block header %}Email Notification <small>{{message}}</small>{% endblock %}
+{% block content %}
+	<div class="row">
+		<div class="col-lg-12"><h4>   
+		An email notifying you 3 days prior to a deadline will be sent. If you want to turn off this function, simply remove your email address.
+		</h4></div>
+	</div>
+	<br>
+    <form method="post" class="form-inline"> {% csrf_token %}
+        <div class="form-group col-sm-7">
+            {{ form.as_p }}
+            <input type="submit" value = "Save" class="btn btn-default">
+        </div>
+    </form>
+    
+{% endblock %}
