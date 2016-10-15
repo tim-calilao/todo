@@ -23,9 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'iszhggdau%ok+%64gg!qii4k-y4sh43h1)jr(a%d^fm-op!u8k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'cpatodolist.pythonanywhere.com',
+    ]
 LOGIN_REDIRECT_URL = '/'
 
 # Email Settings
